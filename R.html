@@ -113,6 +113,15 @@
             align-items: center;
             width: 100%;
         }
+        .bouquet-img {
+  width: 95vw;     /* جوال: أكبر بكثير */
+  max-width: 850px;
+}
+@media (min-width: 768px) {
+  .bouquet-img {
+    width: 850px;
+  }
+}
         .decorative-card.active ~ .flower-bouquet {
             opacity: 0.3;
         }
@@ -144,7 +153,7 @@
 <!-- Full Screen Background -->
 <div class="fixed inset-0 z-0">
 <img alt="Grand Palace Interior" class="w-full h-full object-cover blur-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uj8V3aZJhcdzwglvWZUm4ILlaoB74T4HRwQFSA4la8ujXbF3BrG1SRDF0ioRIH-YopWnOodNZhljCO4SKh-w--tB0i8z5fV5Gi_YleXWNkoYbiw0DbNRrUyFg1B6JQPXpmhkzGeHIqza_05lG7N7eLnAUbqL_7CO57JvjQ6ez7lNXgva_0A6tsqQYFouAOaKM5-TepCJgGmlSd27Kh1Il7ZSqkbzLtO-3ck57HK7Koq9ZhwKCUBfoWNQy84QZvTOg1_qFhsc3xI5w"/>
-<div class="absolute inset-0 bg-surface-dim/20 hero-blur"></div>
+<div class="absolute inset-0 bg-surface-dim/2 hero-blur"></div>
 </div>
 <!-- Container for Falling Petals - Moved behind main content but above background -->
 <div class="fixed inset-0 z-10 pointer-events-none" id="petal-container"></div>
@@ -168,7 +177,7 @@
 </div>
 <!-- Centerpiece Bouquet - Significantly Larger -->
 <div class="flower-bouquet drop-shadow-[0_20px_50px_rgba(103,85,140,0.3)]">
-<img alt="Lavender Rose Bouquet" class="w-[70vw] md:w-[850px] max-w-[850px] h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
+<img alt="Lavender Rose Bouquet" class="bouquet-img h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
 </div>
 </div>
 </main>
