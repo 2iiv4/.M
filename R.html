@@ -108,6 +108,10 @@
             z-index: 30;
             pointer-events: none;
             transition: opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         .decorative-card.active ~ .flower-bouquet {
             opacity: 0.3;
@@ -125,9 +129,13 @@
             pointer-events: none;
             animation: drift linear infinite;
         }
+        html, body {
+             width: 100%;
+             overflow-x: hidden;
+}
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden relative">
+<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden relative overflow-x-hidden ">
 <!-- Header Text -->
 <div class="fixed top-16 left-0 right-0 z-50 flex justify-center pointer-events-none">
 <h1 class="font-headline text-2xl sm:text-3xl md:text-5xl px-4">
@@ -141,7 +149,7 @@
 <!-- Container for Falling Petals - Moved behind main content but above background -->
 <div class="fixed inset-0 z-10 pointer-events-none" id="petal-container"></div>
 <!-- Main Composition -->
-<main class="relative z-20 flex items-center justify-center h-full w-full px-4 md:px-8">
+<main class="relative z-20 flex items-center justify-center min-h-screen w-full px-4 md:px-8">
 <div class="card-interaction-container">
 <!-- Decorative Card behind bouquet initially - Positioned higher and now shifted left via CSS -->
 <div class="decorative-card flex items-center justify-center" id="interactiveCard" onclick="this.classList.toggle('active')">
@@ -160,7 +168,7 @@
 </div>
 <!-- Centerpiece Bouquet - Significantly Larger -->
 <div class="flower-bouquet drop-shadow-[0_20px_50px_rgba(103,85,140,0.3)]">
-<img alt="Lavender Rose Bouquet" class="w-[80vw] max-w-[850px] h-auto>" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
+<img alt="Lavender Rose Bouquet" class="w-[70vw] md:w-[850px] max-w-[850px] h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
 </div>
 </div>
 </main>
