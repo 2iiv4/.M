@@ -95,12 +95,12 @@
             z-index: 25;
             transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
             /* Increased left shift from -120px to -160px */
-            transform: translate(-160px, -80px) rotate(-25deg) scale(0.9);
+            transform: translate(-20vw, -10vh) rotate(-25deg) scale(0.9);
             cursor: pointer;
         }
         .decorative-card.active {
             /* Maintain consistent left shift */
-            transform: translate(-160px, 0) rotate(0deg) scale(1.1);
+            transform: translate(-20vw, 0) rotate(0deg) scale(1.1);
             z-index: 45;
         }
         .flower-bouquet {
@@ -127,11 +127,10 @@
         }
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface overflow-hidden h-screen w-screen relative">
+<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden relative">
 <!-- Header Text -->
 <div class="fixed top-16 left-0 right-0 z-50 flex justify-center pointer-events-none">
-<h1 class="font-headline text-4xl md:text-5xl drop-shadow-lg tracking-wide text-center text-black">
-        
+<h1 class="font-headline text-2xl sm:text-3xl md:text-5xl px-4">
     </h1>
 </div>
 <!-- Full Screen Background -->
@@ -142,12 +141,12 @@
 <!-- Container for Falling Petals - Moved behind main content but above background -->
 <div class="fixed inset-0 z-10 pointer-events-none" id="petal-container"></div>
 <!-- Main Composition -->
-<main class="relative z-20 flex items-center justify-center h-full w-full px-8">
+<main class="relative z-20 flex items-center justify-center h-full w-full px-4 md:px-8">
 <div class="card-interaction-container">
 <!-- Decorative Card behind bouquet initially - Positioned higher and now shifted left via CSS -->
 <div class="decorative-card flex items-center justify-center" id="interactiveCard" onclick="this.classList.toggle('active')">
 <div class="relative">
-<img alt="Decorative Vintage Frame" class="w-[320px] md:w-[450px] drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uiVjLZbLOQn882pwcv2aX7z7dlnneZhSEZ7tDylCF7_r_SdAGChH_p0N4PnjuM4ogYNhWMXtG1PtwH7ooO3G3SDQpQMADErcgWBXp2UOJ3AFfTlo_YWSmb_W_XjemtcKlCL04yGZ__Cs_PX0LUZVEQcD-1bECUrJDWHkQQexPH89BXHeyGffYJjQ6tdvV1tMa_NeJZu-W7Vq33oS9VdG9S3hfopKSM0gN1-gmwN0GpWCbe963yoFlJ0zScp_yStU2BmL_IxXbxWDw"/>
+<img alt="Decorative Vintage Frame" class="w-[60vw] max-w-[450px] h-auto>" src="https://lh3.googleusercontent.com/aida/ADBb0uiVjLZbLOQn882pwcv2aX7z7dlnneZhSEZ7tDylCF7_r_SdAGChH_p0N4PnjuM4ogYNhWMXtG1PtwH7ooO3G3SDQpQMADErcgWBXp2UOJ3AFfTlo_YWSmb_W_XjemtcKlCL04yGZ__Cs_PX0LUZVEQcD-1bECUrJDWHkQQexPH89BXHeyGffYJjQ6tdvV1tMa_NeJZu-W7Vq33oS9VdG9S3hfopKSM0gN1-gmwN0GpWCbe963yoFlJ0zScp_yStU2BmL_IxXbxWDw"/>
 <div class="absolute inset-0 flex items-center justify-center">
 <h2 class="font-headline text-primary drop-shadow-sm select-none" 
     style="font-size: clamp(0.95rem, 4.9vw, 1.95rem); text-align: center; padding: 0 15%; line-height: 2.0; white-space: pre-line;color:#6B3E3C ;transform:translateY(-15%) ;">
@@ -161,7 +160,7 @@
 </div>
 <!-- Centerpiece Bouquet - Significantly Larger -->
 <div class="flower-bouquet drop-shadow-[0_20px_50px_rgba(103,85,140,0.3)]">
-<img alt="Lavender Rose Bouquet" class="w-[500px] md:w-[850px] max-w-none transform" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
+<img alt="Lavender Rose Bouquet" class="w-[80vw] max-w-[850px] h-auto>" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
 </div>
 </div>
 </main>
@@ -172,7 +171,7 @@
 <div class="fixed bottom-32 right-12 z-40 border-r border-b border-secondary/30 w-16 h-16 pointer-events-none"></div>
 <script>
     const container = document.getElementById('petal-container');
-    const petalCount = 60;
+    const petalCount = window.innerWidth < 768 ? 30 : 60;
 
     for (let i = 0; i < petalCount; i++) {
         const petal = document.createElement('div');
