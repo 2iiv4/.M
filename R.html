@@ -1,212 +1,260 @@
 <!DOCTYPE html>
-
-<html dir="rtl" lang="ar"><head>
+<html dir="rtl" lang="ar">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Ethereal Manor</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "error-container": "#ffdad6",
-                    "surface-container": "#efeeeb",
-                    "surface": "#faf9f6",
-                    "surface-container-low": "#f4f3f1",
-                    "surface-container-high": "#e9e8e5",
-                    "on-tertiary": "#ffffff",
-                    "on-primary-fixed-variant": "#4f3d73",
-                    "surface-dim": "#dbdad7",
-                    "secondary-fixed-dim": "#e9c349",
-                    "on-background": "#1a1c1a",
-                    "outline-variant": "#cbc4d0",
-                    "surface-bright": "#faf9f6",
-                    "tertiary-container": "#b4a396",
-                    "secondary-container": "#fed65b",
-                    "on-secondary-fixed": "#241a00",
-                    "on-error-container": "#93000a",
-                    "on-primary-fixed": "#220f44",
-                    "on-secondary-container": "#745c00",
-                    "surface-tint": "#67558c",
-                    "tertiary-fixed": "#f2dfd0",
-                    "surface-container-highest": "#e3e2e0",
-                    "secondary-fixed": "#ffe088",
-                    "primary": "#67558c",
-                    "on-secondary": "#ffffff",
-                    "surface-variant": "#e3e2e0",
-                    "inverse-primary": "#d2bcfb",
-                    "surface-container-lowest": "#ffffff",
-                    "error": "#ba1a1a",
-                    "tertiary": "#695c50",
-                    "on-tertiary-fixed-variant": "#51453a",
-                    "primary-fixed-dim": "#d2bcfb",
-                    "on-tertiary-fixed": "#231a11",
-                    "on-primary": "#ffffff",
-                    "on-primary-container": "#443267",
-                    "primary-fixed": "#ebddff",
-                    "outline": "#7a757f",
-                    "tertiary-fixed-dim": "#d5c3b5",
-                    "secondary": "#735c00",
-                    "on-surface-variant": "#49454f",
-                    "on-tertiary-container": "#45392f",
-                    "primary-container": "#b19cd9",
-                    "inverse-surface": "#2f312f",
-                    "on-error": "#ffffff",
-                    "background": "#faf9f6",
-                    "on-surface": "#1a1c1a",
-                    "on-secondary-fixed-variant": "#574500",
-                    "inverse-on-surface": "#f2f1ee"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Plus Jakarta Sans"],
-                    "label": ["Plus Jakarta Sans"]
-            }
-          },
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "error-container": "#ffdad6",
+          "surface-container": "#efeeeb",
+          "surface": "#faf9f6",
+          "surface-container-low": "#f4f3f1",
+          "surface-container-high": "#e9e8e5",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed-variant": "#4f3d73",
+          "surface-dim": "#dbdad7",
+          "secondary-fixed-dim": "#e9c349",
+          "on-background": "#1a1c1a",
+          "outline-variant": "#cbc4d0",
+          "surface-bright": "#faf9f6",
+          "tertiary-container": "#b4a396",
+          "secondary-container": "#fed65b",
+          "on-secondary-fixed": "#241a00",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#220f44",
+          "on-secondary-container": "#745c00",
+          "surface-tint": "#67558c",
+          "tertiary-fixed": "#f2dfd0",
+          "surface-container-highest": "#e3e2e0",
+          "secondary-fixed": "#ffe088",
+          "primary": "#67558c",
+          "on-secondary": "#ffffff",
+          "surface-variant": "#e3e2e0",
+          "inverse-primary": "#d2bcfb",
+          "surface-container-lowest": "#ffffff",
+          "error": "#ba1a1a",
+          "tertiary": "#695c50",
+          "on-tertiary-fixed-variant": "#51453a",
+          "primary-fixed-dim": "#d2bcfb",
+          "on-tertiary-fixed": "#231a11",
+          "on-primary": "#ffffff",
+          "on-primary-container": "#443267",
+          "primary-fixed": "#ebddff",
+          "outline": "#7a757f",
+          "tertiary-fixed-dim": "#d5c3b5",
+          "secondary": "#735c00",
+          "on-surface-variant": "#49454f",
+          "on-tertiary-container": "#45392f",
+          "primary-container": "#b19cd9",
+          "inverse-surface": "#2f312f",
+          "on-error": "#ffffff",
+          "background": "#faf9f6",
+          "on-surface": "#1a1c1a",
+          "on-secondary-fixed-variant": "#574500",
+          "inverse-on-surface": "#f2f1ee"
         },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "headline": ["Noto Serif"],
+          "body": ["Plus Jakarta Sans"],
+          "label": ["Plus Jakarta Sans"]
         }
-        .hero-blur {
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        .card-interaction-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .decorative-card {
-            position: absolute;
-            z-index: 25;
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-            /* Increased left shift from -120px to -160px */
-            transform: translate(-20vw, -10vh) rotate(-25deg) scale(0.9);
-            cursor: pointer;
-        }
-        .decorative-card.active {
-            /* Maintain consistent left shift */
-            transform: translate(-20vw, 0) rotate(0deg) scale(1.1);
-            z-index: 45;
-        }
-        .flower-bouquet {
-            position: relative;
-            z-index: 30;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        .bouquet-img {
-  width: 110vw;     /* جوال: أكبر بكثير */
-  max-width: 950px;
-}
-@media (min-width: 768px) {
-  .bouquet-img {
-    width: 950px;
+      },
+    },
   }
-}
-        .decorative-card.active ~ .flower-bouquet {
-            opacity: 0.3;
-        }
-    
-        @keyframes drift {
-            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(100vh) translateX(100px) rotate(720deg); opacity: 0; }
-        }
-        .petal {
-            position: absolute;
-            top: -5vh;
-            pointer-events: none;
-            animation: drift linear infinite;
-        }
-        html, body {
-             width: 100%;
-             overflow-x: hidden;
-}
-    </style>
+</script>
+<style>
+  .hero-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .card-interaction-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .decorative-card {
+    position: absolute;
+    z-index: 25;
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translate(-20vw, -10vh) rotate(-25deg) scale(0.9);
+    cursor: pointer;
+  }
+
+  .decorative-card.active {
+    transform: translate(-20vw, 0) rotate(0deg) scale(1.1);
+    z-index: 45;
+  }
+
+  .flower-bouquet {
+    position: relative;
+    z-index: 30;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bouquet-img {
+    width: 95vw;
+    max-width: 850px;
+  }
+
+  @media (min-width: 768px) {
+    .bouquet-img { width: 850px; }
+  }
+
+  .decorative-card.active ~ .flower-bouquet {
+    opacity: 0.3;
+  }
+
+  /* ===== البتلات ===== */
+  .petal-outer {
+    position: absolute;
+    top: -60px;
+    pointer-events: none;
+    animation: petalFall linear infinite;
+  }
+
+  .petal-inner {
+    animation: petalSway ease-in-out infinite alternate;
+  }
+  .petal-img {
+    background-image: url('p.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: petalSpin linear infinite;
+  }
+
+  @keyframes petalFall {
+    from { transform: translateY(0);      opacity: 1; }
+    95%  { opacity: 0.8; }
+    to   { transform: translateY(110vh);  opacity: 0; }
+  }
+
+  @keyframes petalSway {
+    from { transform: translateX(-30px); }
+    to   { transform: translateX(30px);  }
+  }
+
+  @keyframes petalSpin {
+    from { transform: rotate(0deg)   scale(1);    }
+    50%  { transform: rotate(180deg) scale(0.85); }
+    to   { transform: rotate(360deg) scale(1);    }
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+</style>
 </head>
-<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden relative overflow-x-hidden ">
-<!-- Header Text -->
-<div class="fixed top-16 left-0 right-0 z-50 flex justify-center pointer-events-none">
-<h1 class="font-headline text-2xl sm:text-3xl md:text-5xl px-4">
-    </h1>
-</div>
-<!-- Full Screen Background -->
+<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden relative">
+
+<!-- خلفية كاملة -->
 <div class="fixed inset-0 z-0">
-<img alt="Grand Palace Interior" class="w-full h-full object-cover blur-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uj8V3aZJhcdzwglvWZUm4ILlaoB74T4HRwQFSA4la8ujXbF3BrG1SRDF0ioRIH-YopWnOodNZhljCO4SKh-w--tB0i8z5fV5Gi_YleXWNkoYbiw0DbNRrUyFg1B6JQPXpmhkzGeHIqza_05lG7N7eLnAUbqL_7CO57JvjQ6ez7lNXgva_0A6tsqQYFouAOaKM5-TepCJgGmlSd27Kh1Il7ZSqkbzLtO-3ck57HK7Koq9ZhwKCUBfoWNQy84QZvTOg1_qFhsc3xI5w"/>
-<div class="absolute inset-0 bg-surface-dim/15 hero-blur"></div>
+  <img alt="Grand Palace Interior"
+       class="w-full h-full object-cover blur-sm"
+       src="g.jpg" />
+  <div class="absolute inset-0 bg-surface-dim/10 hero-blur"></div>
 </div>
-<!-- Container for Falling Petals - Moved behind main content but above background -->
+
+<!-- طبقة البتلات -->
 <div class="fixed inset-0 z-10 pointer-events-none" id="petal-container"></div>
-<!-- Main Composition -->
+
+<!-- المحتوى الرئيسي -->
 <main class="relative z-20 flex items-center justify-center min-h-screen w-full px-4 md:px-8">
-<div class="card-interaction-container">
-<!-- Decorative Card behind bouquet initially - Positioned higher and now shifted left via CSS -->
-<div class="decorative-card flex items-center justify-center" id="interactiveCard" onclick="this.classList.toggle('active')">
-<div class="relative">
-<img alt="Decorative Vintage Frame" class="w-[60vw] max-w-[450px] h-auto>" src="https://lh3.googleusercontent.com/aida/ADBb0uiVjLZbLOQn882pwcv2aX7z7dlnneZhSEZ7tDylCF7_r_SdAGChH_p0N4PnjuM4ogYNhWMXtG1PtwH7ooO3G3SDQpQMADErcgWBXp2UOJ3AFfTlo_YWSmb_W_XjemtcKlCL04yGZ__Cs_PX0LUZVEQcD-1bECUrJDWHkQQexPH89BXHeyGffYJjQ6tdvV1tMa_NeJZu-W7Vq33oS9VdG9S3hfopKSM0gN1-gmwN0GpWCbe963yoFlJ0zScp_yStU2BmL_IxXbxWDw"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<h2 class="font-headline text-primary drop-shadow-sm select-none" 
-    style="font-size: clamp(0.95rem, 4.9vw, 1.95rem); text-align: center; padding: 0 15%; line-height: 2.0; white-space: pre-line;color:#6B3E3C ;transform:translateY(-15%) ;">
-    يمر العام
- وبعده عام 
+  <div class="card-interaction-container">
+
+    <!-- الكارد -->
+    <div class="decorative-card flex items-center justify-center"
+         id="interactiveCard"
+         onclick="this.classList.toggle('active')">
+      <div class="relative">
+        <img alt="Decorative Vintage Frame"
+             class="w-[60vw] max-w-[450px] h-auto"
+             src="c.png" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h2 class="font-headline drop-shadow-sm select-none"
+              style="font-size: clamp(0.95rem, 4.9vw, 1.95rem); text-align: center; padding: 0 15%; line-height: 2.0; white-space: pre-line; color:#6B3E3C; transform:translateY(-15%);">
+            يمر العام
+ وبعده عام
 وما يكبر سِوى
  زييييييينك♡
-</h2>
-</div>
-</div>
-</div>
-<!-- Centerpiece Bouquet - Significantly Larger -->
-<div class="flower-bouquet drop-shadow-[0_20px_50px_rgba(103,85,140,0.3)]">
-<img alt="Lavender Rose Bouquet" class="bouquet-img h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uh-nEnM3nqyWrZPCVDi2rhtrgqfcTtViWySAiyHTKU5NQnEFjaM6qq0Mn3DKmt6CamiSjlyjHF1cvJo8jl0OJkhohuTnkXwdg2ODo0fwt6tRalDlwyqQwpNDj0aNZzwG99LjlApwuQ5sMMkTXiwN3DXiDNPtlX9RsRJAzEygKkcJg4XpYpDR72bpiSoAEXpWcchAY2Im4j1NDGmRvXjRwzG0TaIku1nYF9bC_u6g5q49GJBcufbfr9qx2TgNXSyZDIf4NCusJtQsg"/>
-</div>
-</div>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- البوكيه -->
+    <div class="flower-bouquet drop-shadow-[0_20px_50px_rgba(103,85,140,0.3)]">
+      <img alt="Lavender Rose Bouquet"
+           class="bouquet-img h-auto"
+           src="b.png" />
+    </div>
+
+  </div>
 </main>
-<!-- Decorative Gold Accents -->
+
+<!-- زوايا ذهبية -->
 <div class="fixed top-12 left-12 z-40 border-l border-t border-secondary/30 w-16 h-16 pointer-events-none"></div>
 <div class="fixed top-12 right-12 z-40 border-r border-t border-secondary/30 w-16 h-16 pointer-events-none"></div>
 <div class="fixed bottom-32 left-12 z-40 border-l border-b border-secondary/30 w-16 h-16 pointer-events-none"></div>
 <div class="fixed bottom-32 right-12 z-40 border-r border-b border-secondary/30 w-16 h-16 pointer-events-none"></div>
-<script>
-    const container = document.getElementById('petal-container');
-    const petalCount = window.innerWidth < 768 ? 30 : 60;
 
-    for (let i = 0; i < petalCount; i++) {
-        const petal = document.createElement('div');
-        const size = Math.random() * 12 + 6;
-        const duration = Math.random() * 10 + 10;
-        const delay = Math.random() * 20;
-        
-        petal.className = 'petal';
-        petal.style.width = `${size}px`;
-        petal.style.height = `${size}px`;
-        petal.style.backgroundColor = '#d5bffe';
-        petal.style.borderRadius = '50% 0 50% 50%';
-        petal.style.left = `${Math.random() * 100}vw`;
-        petal.style.animationDuration = `${duration}s`;
-        petal.style.animationDelay = `-${delay}s`;
-        petal.style.opacity = Math.random() * 0.5 + 0.3;
-        
-        container.appendChild(petal);
-    }
-    </script>
-</body></html>
+<script>
+  var container  = document.getElementById('petal-container');
+  var isMobile   = window.innerWidth < 768;
+  var petalCount = isMobile ? 35 : 65;
+
+  for (var i = 0; i < petalCount; i++) {
+    var size     = 20 + Math.random() * 28;
+    var duration = 10 + Math.random() * 12;
+    var swayDur  = 2  + Math.random() * 3;
+    var spinDur  = 3  + Math.random() * 5;
+    var delay    = -(Math.random() * duration);
+    var leftPos  = Math.random() * 100;
+    var opacity  = 0.85 + Math.random() * 0.16;
+
+    var outer = document.createElement('div');
+    outer.className = 'petal-outer';
+    outer.style.left                 = leftPos + 'vw';
+    outer.style.animationDuration    = duration + 's';
+    outer.style.animationDelay       = delay + 's';
+
+    var inner = document.createElement('div');
+    inner.className = 'petal-inner';
+    inner.style.animationDuration = swayDur + 's';
+    inner.style.animationDelay    = delay + 's';
+
+    var img = document.createElement('div');
+    img.className = 'petal-img';
+    img.style.width             = size + 'px';
+    img.style.height            = size + 'px';
+    img.style.opacity           = opacity;
+    img.style.animationDuration = spinDur + 's';
+    img.style.animationDelay    = delay + 's';
+    inner.appendChild(img);
+    outer.appendChild(inner);
+    container.appendChild(outer);
+  }
+</script>
+</body>
+</html>
