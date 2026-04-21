@@ -225,13 +225,13 @@
   var petalCount = isMobile ? 35 : 65;
 
   for (var i = 0; i < petalCount; i++) {
-    var size     = 20 + Math.random() * 28;
+    var size     = 40 + Math.random() * 50;
     var duration = 10 + Math.random() * 12;
     var swayDur  = 2  + Math.random() * 3;
     var spinDur  = 3  + Math.random() * 5;
     var delay    = -(Math.random() * duration);
     var leftPos  = Math.random() * 100;
-    var opacity  = 1.2  ;
+    var opacity  = 1 ;
 
     var outer = document.createElement('div');
     outer.className = 'petal-outer';
